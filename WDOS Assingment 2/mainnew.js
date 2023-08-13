@@ -1,4 +1,4 @@
-if (window.location.href == "https://akilz02.github.io/WDOS_Assignment//WDOS%20Assingment%202/BuyTickets.html") {
+if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/WDOS%20Assingment%202/BuyTickets.html") {
 
     // calander 
 
