@@ -1,4 +1,4 @@
-if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Home.html") {
+if (window.location.href == "https://akilz02.github.io/WDOS_Assignment//WDOS%20Assingment%202/BuyTickets.html") {
 
     // calander 
 
@@ -1550,7 +1550,7 @@ if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Home.html
 
 //Details page
 
-if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Details.html") {
+if (window.location.href == "https://akilz02.github.io/WDOS_Assignment//WDOS%20Assingment%202/Details.html") {
 
     document.getElementById("selected-date").innerText = sessionStorage.getItem("saved-date");
     document.getElementById("selected-time").innerText = sessionStorage.getItem("saved-time");
@@ -1668,10 +1668,6 @@ if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Details.h
 
 
 
-        if (check1 && check2 && check3 && check4) {
-/*                 window.location.href = "https://www.google.com";
- */                console.log(".");
-        }
 
 
         return true;
@@ -1712,7 +1708,7 @@ if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Details.h
 
 // Payment page
 
-if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Payment.html") {
+if (window.location.href == "https://akilz02.github.io/WDOS_Assignment//WDOS%20Assingment%202/Payment.html") {
 
     document.getElementById("selected-date").innerText = sessionStorage.getItem("saved-date");
     document.getElementById("selected-time").innerText = sessionStorage.getItem("saved-time");
@@ -1772,7 +1768,7 @@ function settingStorage() {
 //Conformation page
 
 
-if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Conformation.html") {
+if (window.location.href == "https://akilz02.github.io/WDOS_Assignment//WDOS%20Assingment%202/Conformation.html") {
 
     document.getElementById("selected-date").innerText = sessionStorage.getItem("saved-date");
     document.getElementById("selected-time").innerText = sessionStorage.getItem("saved-time");
