@@ -695,6 +695,22 @@ main .row2 .column2 {
   text-align: center;
 }
 
+/* Book Now button */
+.book-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .book-now-button:hover {
+    background-color: black;
+  }
+
 /* Threats to turtles */
 .headerr-threats {
   min-height: 100vh;
