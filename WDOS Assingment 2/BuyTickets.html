@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Buy Tickets</title>
+</head>
+
+<!-- <header>Buy Tickets</header> -->
+
+<body>
+    <div class="bg-image">
+        <div class="cover">
+            <h1>Buy Tickets</h1>
+        </div>
+
+        <div class="container">
+
+            <h2>When are you coming?</h2>
+            <p>● Select the date you want to visit</p>
+            <p>● The Hikkaduwa turtle hatchery will operate all seven days of the week from 07.00am - 6.00pm.</p>
+
+            <div class="wrapper">
+                <header>
+
+                    <p class="current-date"> July 2023</p>
+                    <div class="icons">
+                        <span id="prev" class="material-symbols-rounded">&#60;</span>
+                        <span id="next" class="material-symbols-rounded">&#62;</span>
+                    </div>
+                </header>
+                <div class="calendar">
+                    <ul class="weeks">
+                        <li>Sun</li>
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                    </ul>
+
+                    <ul class="days">
+                        <li class="inactive">25</li>
+                        <li class="inactive">26</li>
+                        <li class="inactive">27</li>
+                        <li class="inactive">28</li>
+                        <li class="inactive">29</li>
+                        <li class="inactive">30</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li class="inactive">1</li>
+                        <li class="inactive">2</li>
+                        <li class="inactive">3</li>
+                        <li class="inactive">4</li>
+                        <li class="inactive">5</li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+            <div class="duration">
+                <h2>Duration</h2>
+                <div class="time-d-texet">
+                <p>● Select the time duration you want to visit</p>
+                <p>● Please note that every day from 10.00 am to 1.00 pm and from 3.00 pm to 6.00 pm will be considered as Peak hours.</p>
+                </div>
+                <div class="duration-buttons">
+                    <input type="checkbox" id="cb1" name="box1"  onclick="timeduration()">
+                    <button for="cb1" id="box1" value="07.00-08.00">07.00 am - 08.00 am</button>
+
+                    <input type="checkbox" id="cb2" name="box2" onclick="timeduration()">
+                    <button for="cb2" id="box2" value="08.00-09.00">08.00 am - 09.00 am</button>
+
+                    <input type="checkbox" id="cb3" name="box3" onclick="timeduration()">
+                    <button  for="cb3" id="box3" value="09.00-10.00">09.00 am - 10.00 am</button>
+
+                    <input type="checkbox" id="cb4p" name="box4p" onclick="timeduration()">
+                    <button for="cb4p"id="box4p" value="10.00-11.00">10.00 am - 11.00 am(Peak)</button>
+
+                    <input type="checkbox" id="cb5p" name="box5" onclick="timeduration()">
+                    <button for="cb5p" id="box5p" value="11.00-12.00">11.00 am - 12.00 pm(Peak)</button>
+
+                    <input type="checkbox" id="cb6p" name="box6" onclick="timeduration()">
+                    <button for="cb6p" id="box6p" value="12.00-01.00">12.00 pm - 01.00 pm(Peak)</button>
+
+                    <input type="checkbox" id="cb7" name="box7" onclick="timeduration()">
+                    <button  for="cb7" id="box7" value="12.00-01.00">01.00 pm - 02.00 pm</button>
+
+                    <input type="checkbox" id="cb8" name="box8" onclick="timeduration()">
+                    <button for="cb8" id="box8" value="12.00-01.00">02.00 pm - 03.00 pm</button>
+
+                    <input type="checkbox" id="cb9p" name="box9" onclick="timeduration()">
+                    <button for="cb9p" id="box9p" value="12.00-01.00">03.00 pm - 04.00 pm(Peak)</button>
+
+                    <input type="checkbox" id="cb10p" name="box10" onclick="timeduration()">
+                    <button for="cb10p" id="box10p" value="12.00-01.00">04.00 pm - 05.00 pm(Peak)</button>
+
+                    <input type="checkbox" id="cb11p" name="box11" onclick="timeduration()">
+                    <button for="cb11p" id="box11p" value="12.00-01.00">05.00 pm - 06.00 pm(Peak)</button>
+                   
+                </div>
+                <p>● Guests will be charged based on 1 hour based time slots</p><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tickets</th>
+                            <th>Charges (Normal)</th>
+                            <th>Charges (Peek)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pricing-table">
+                        <tr>
+                            <td>1 SL Adult</td>
+                            <td>$4</td>
+                            <td>$6</td>
+                        </tr>
+                        <tr>
+                            <td>1 SL Child</td>
+                            <td>$2</td>
+                            <td>$3</td>
+                        </tr>
+                        <tr>
+                            <td>1 Foreigner Adult</td>
+                            <td>$8</td>
+                            <td>$10</td>
+                        </tr>
+                        <tr>
+                            <td>1 Foreigner Child</td>
+                            <td>$5</td>
+                            <td>$8</td>
+                        </tr>
+                        <tr>
+                            <td>1 Infant</td>
+                            <td>free</td>
+                            <td>free</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="guests">
+                <h2>Guests</h2>
+                <p>● How many guests are coming </p>
+
+                <div class="guests-category">
+
+                    <div class="g-pn">
+                        <div class="H">
+                            <label for="sl-adult">SL Adult:</label>
+
+                            <button id="nb-g1" onclick="nf1()">-</button>
+                            <span id="g1">0</span>
+                            <button id="pb-g1" onclick="pf1()">+</button><br>
+
+                        </div>
+                    </div>
+
+                    <div class="g-pn">
+                        <div class="H">
+                            <label for="sl-child">SL Child:</label>
+
+                            <button id="nb-g2" onclick="nf2()">-</button>
+                            <span id="g2">0</span>
+                            <button id="pb-g2" onclick="pf2()">+</button><br>
+
+                        </div>
+                    </div>
+
+                    <div class="g-pn">
+                        <div class="H">
+                            <label for="Foreigner">Foreigner Adult:</label>
+
+                            <button id="nb-g3" onclick="nf3()">-</button>
+                            <span id="g3">0</span>
+                            <button id="pb-g3" onclick="pf3()">+</button><br>
+                        </div>
+                    </div>
+
+                    <div class="g-pn">
+                        <div class="H">
+                            <label for="Foreigner">Foreigner Child:</label>
+
+                            <button id="nb-g4" onclick="nf4()">-</button>
+                            <span id="g4">0</span>
+                            <button id="pb-g4" onclick="pf4()">+</button><br>
+                        </div>
+                    </div>
+
+                    <div class="g-pn">
+                        <div class="H">
+                            <label for="infant">Infant:</label>
+
+                            <button id="nb-g5" onclick="nf5()">-</button>
+                            <span id="g5">0</span>
+                            <button id="pb-g5" onclick="pf5()">+</button><br>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <button id="purchase-btn" onclick="settingStorage()"><a href="Details.html">Continue with Purchase</a></button>
+        </div>
+
+        <div class="summary">
+            <h2>Summary</h2>
+            <table>
+                <tr>
+                    <td>Date</td>
+                    <td id="selected-date">--</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td id="selected-time"></td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td id="selected-duration"></td>
+                </tr>
+
+
+                <tr id="ccc">
+                    <td>1 Foreigner Adult</td>
+                    <td>$8</td>
+
+                </tr>
+                <tr style="display: none" id="sri-ad">
+                    <td id="sriadult1"></td>
+                    <td id="sriadult2"></td>
+
+                </tr>
+                <tr style="display: none" id="sri-ch">
+                    <td id="srichil1"></td>
+                    <td id="srichild2"></td>
+
+                </tr>
+                <tr style="display: none" id="fore-adult">
+                    <td id="foradult1"></td>
+                    <td id="foradult2"></td>
+
+                </tr>
+                <tr style="display: none" id="fore-child">
+                    <td id="forchild1"></td>
+                    <td id="forchild2"></td>
+
+
+                </tr>
+
+                <tr id="total">
+                    <td id="total1">total</td>
+                    <td id="total2"></td>
+
+
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+    <script src="mainnew.js"></script>
+
+    <footer>
+        <div class="fcontainer">
+          <p>&copy; 2023 Hikkaduwa Turtle Hatchery. All rights reserved.</p>
+          <p>Contact us at: info@turtlehatchery.com</p>
+        </div>
+      </footer>
+      
+</body>
+
+</html>

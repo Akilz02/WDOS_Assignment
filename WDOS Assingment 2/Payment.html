@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="cover">
+        <h1>Buy Tickets</h1>
+    </div>
+    <div class="container-pay">
+        <h2>Payment details</h2>
+        <section class="ui">
+            <div class="container-left">
+                <form id="credit-card">
+                    <div class="number-container">
+                        <label>Card Number</label>
+                        <input type="text" name="card-number" id="card-number" maxlength="19"
+                            placeholder="1234 5678 9101 1121" required
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div class="name-container">
+                        <label>Holder</label>
+                        <input type="text" name="name-text" id="name-text" maxlength="30" placeholder="NOAH JACOB"
+                            required
+                            onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+                    </div>
+                    <div class="infos-container">
+                        <div class="expiration-container">
+                            <label>Valid-thru</label>
+                            <input type="text" name="valid-thru-text" id="valid-thru-text" maxlength="5"
+                                placeholder="02/40" required
+                                onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                        <div class="cvv-container">
+                            <label>CVV</label>
+                            <input type="text" name="cvv-text" id="cvv-text" maxlength="4" placeholder="1234" required
+                                onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                    </div>
+                    <button id="paybtn" onclick="payBtn()"><label id="add">PAY $</label></button>
+                </form>
+            </div>
+            <div class="container-right">
+                <div class="card">
+                    <div class="intern">
+                        <img class="approximation" src="Images/aprox.png" alt="aproximation">
+                        <div class="card-number">
+                            <div class="number-vl">1234 5678 9101 1121</div>
+                        </div>
+                        <div class="card-holder">
+                            <label>Holder</label>
+                            <div class="name-vl">NOAH JACOB</div>
+                        </div>
+                        <div class="card-infos">
+                            <div class="exp">
+                                <label>valid-thru</label>
+                                <div class="expiration-vl">02/40</div>
+                            </div>
+                            <div class="cvv">
+                                <label>CVV</label>
+                                <div class="cvv-vl">123</div>
+                            </div>
+                        </div>
+                        <img class="chip" src="Images/chip.png" alt="chip">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button id="purchase-btn" disabled><a href="Conformation.html">Continue with Purchase</a></button>
+    </div>
+
+    <div class="summary">
+        <h2>Summary</h2>
+        <table>
+            <tr>
+                <td>Date</td>
+                <td id="selected-date">--</td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="selected-time"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="selected-duration"></td>
+            </tr>
+
+
+            <tr id="ccc">
+                <td>1 Foreigner Adult</td>
+                <td>$10</td>
+
+            </tr>
+            <tr style="display: none" id="sri-ad">
+                <td id="sriadult1"></td>
+                <td id="sriadult2"></td>
+
+            </tr>
+            <tr style="display: none" id="sri-ch">
+                <td id="srichil1"></td>
+                <td id="srichild2"></td>
+
+            </tr>
+            <tr style="display: none" id="fore-adult">
+                <td id="foradult1"></td>
+                <td id="foradult2"></td>
+
+            </tr>
+            <tr style="display: none" id="fore-child">
+                <td id="forchild1"></td>
+                <td id="forchild2"></td>
+
+
+            </tr>
+
+            <tr id="total">
+                <td id="total1">total</td>
+                <td id="total2"></td>
+
+
+            </tr>
+
+        </table>
+    </div>
+    <script src="mainnew.js"></script>
+    <script src="index.js"></script>
+
+    <footer>
+        <div class="fcontainer">
+          <p>&copy; 2023 Hikkaduwa Turtle Hatchery. All rights reserved.</p>
+          <p>Contact us at: info@turtlehatchery.com</p>
+        </div>
+      </footer>
+
+</body>
+
+</html>

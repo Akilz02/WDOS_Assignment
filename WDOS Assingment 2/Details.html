@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="international-telephone-input.css"> -->
+</head>
+
+<body>
+    <div class="cover">
+        <h1>Buy Tickets</h1>
+    </div>
+
+    <div class="container">
+        <form id="detform">
+
+            <h2>Enter Your Details</h2>
+
+            <label for="full-name">Full Name<span style="color: rgb(230, 5, 5);">* </span>: </label>
+            <input type="text" id="full-name"><br>
+            <p id="check1" style="display: none; color: rgb(255, 255, 255); margin-top: -20px;">Please enter a valid full name.</p>
+
+            <label for="user-email">Email Address<span style="color: red;">* </span>: </label>
+            <input type="email" id="user-email"><br>
+            <p id="check2" style="display: none; color: rgb(255, 255, 255); margin-top: -20px;">Please enter a valid email id.</p>
+
+            <label for="confirm email">Confirm Email<span style="color: red;">* </span>: </label>
+            <input type="email" id="confirm-email"><br>
+            <p id="check3" style="display: none; color: rgb(255, 255, 255); margin-top: -20px;">Email id doesn't match</p>
+
+            <label for="user-mobile">Mobile<span style="color: red;">* </span>: </label>
+            <input type="tel" id="user-mobile"><br>
+            <p id="check4" style="display: none; color: rgb(255, 255, 255); margin-top: -20px;">Please enter a valid 10-digit mobile number.</p>
+
+            <label for="gender">Gender:</label>
+            <select id="user-gender" name="gender" onchange="changeGender(this)">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+
+            <label for="postal-code">Postal Code:</label>
+            <input type="text" id="postal-code" name="postal-code">
+
+            <div class="buttons">
+                <!-- <button type="reset">Reset</button> -->
+                <button onclick="btnSubmit(event)">Submit</button>
+            </div>
+        </form>
+        <button id="purchase-btn" disabled><a href="Payment.html">Continue with Purchase</a></button>
+    </div>
+
+
+    <div class="summary">
+        <h2>Summary</h2>
+        <table>
+            
+            <tr>
+                <td>Date</td>
+                <td id="selected-date">--</td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="selected-time"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="selected-duration"></td>
+            </tr>
+
+            <tr style="display: none" id="sri-ad">
+                <td id="sriadult1"></td>
+                <td id="sriadult2"></td>
+
+            </tr>
+            <tr style="display: none" id="sri-ch">
+                <td id="srichil1"></td>
+                <td id="srichild2"></td>
+
+            </tr>
+            <tr style="display: none" id="fore-adult">
+                <td id="foradult1"></td>
+                <td id="foradult2"></td>
+
+            </tr>
+            <tr style="display: none" id="fore-child">
+                <td id="forchild1"></td>
+                <td id="forchild2"></td>
+
+
+            </tr>
+
+            <tr id="total">
+                <td id="total1">total</td>
+                <td id="total2"></td>
+
+
+            </tr>
+
+        </table>
+    </div>
+    
+    <script src="mainnew.js"></script>
+    <script src="international-telephone-input.js"></script>
+
+    <footer>
+        <div class="fcontainer">
+          <p>&copy; 2023 Hikkaduwa Turtle Hatchery. All rights reserved.</p>
+          <p>Contact us at: info@turtlehatchery.com</p>
+        </div>
+      </footer>
+      
+</body>
+
+</html>
