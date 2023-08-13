@@ -1,4 +1,4 @@
-if (window.location.href == "http://127.0.0.1:5500/BuyTickets.html") {
+if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Home.html") {
 
     // calander 
 
@@ -1550,7 +1550,7 @@ if (window.location.href == "http://127.0.0.1:5500/BuyTickets.html") {
 
 //Details page
 
-if (window.location.href == "http://127.0.0.1:5500/Details.html") {
+if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Details.html") {
 
     document.getElementById("selected-date").innerText = sessionStorage.getItem("saved-date");
     document.getElementById("selected-time").innerText = sessionStorage.getItem("saved-time");
@@ -1712,7 +1712,7 @@ if (window.location.href == "http://127.0.0.1:5500/Details.html") {
 
 // Payment page
 
-if (window.location.href == "http://127.0.0.1:5500/Payment.html") {
+if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Payment.html") {
 
     document.getElementById("selected-date").innerText = sessionStorage.getItem("saved-date");
     document.getElementById("selected-time").innerText = sessionStorage.getItem("saved-time");
@@ -1772,7 +1772,7 @@ function settingStorage() {
 //Conformation page
 
 
-if (window.location.href == "http://127.0.0.1:5500/Conformation.html") {
+if (window.location.href == "https://akilz02.github.io/WDOS_Assignment/Conformation.html") {
 
     document.getElementById("selected-date").innerText = sessionStorage.getItem("saved-date");
     document.getElementById("selected-time").innerText = sessionStorage.getItem("saved-time");
